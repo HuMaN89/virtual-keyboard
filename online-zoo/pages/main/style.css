@@ -135,7 +135,8 @@
 .backstage {
   display: flex;
   position: relative;
-  margin: 140px 220px 180px;
+  margin: 140px auto 180px;
+
   width: 1160px;
   height: 403px;
 }
@@ -188,6 +189,64 @@
 
 .image-flower1 {
   position: absolute;
-  right: -220px;
+  right: -312px;
   top: -128px;
+  width: 293px;
+  height: 605px;
+}
+.image-flower1 img {
+  height: 100%;
+}
+
+/* galery */
+.galery {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1545px;
+  margin-left: 220px;
+  justify-content: space-between;
+}
+.galery::before {
+
+}
+.galery-item {
+  width: 366px;
+  height: 426px;
+  position: relative;
+border: 1px solid #FA6F32;
+border-radius: 5px;
+margin-bottom: 20px;
+}
+.galery-name {
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 140%;
+margin-top: 8px;
+margin-left: 18px;
+/* or 22px */
+
+text-transform: uppercase;
+
+color: #000000;
+}
+.galery-desc {
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 300;
+font-size: 15px;
+margin-left: 18px;
+line-height: 120%;
+/* identical to box height, or 18px */
+
+
+color: #000000;
+}
+.galery-eat {
+  position: absolute;
+  bottom: 10px;
+  right: 14px;
 }
