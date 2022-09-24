@@ -67,6 +67,12 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+.nav-item-active {
+  background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
 .designed {
   margin-left: auto;
   margin-right: 220px;
@@ -76,6 +82,10 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 140%;
+}
+.designed a {
+  text-decoration: none;
+  color: #fff;
 }
 .main-title {
   position: absolute;
@@ -198,55 +208,76 @@
   height: 100%;
 }
 
-/* galery */
+/* slider */
+.slider {
+  width: 1160px;
+  overflow: hidden;
+  margin: auto;
+  position: relative;
+  text-align: center;
+}
 .galery {
   display: flex;
   flex-wrap: wrap;
   width: 1545px;
-  margin-left: 220px;
   justify-content: space-between;
 }
-.galery::before {
-
+.galery-controls {
+  position: absolute;
+  top: 436px;
+  left: -20px;
+  width: 62px;
+  height: 62px;
+  background-image: url(../../assets/icons/arrow_elips.png);
 }
 .galery-item {
   width: 366px;
   height: 426px;
   position: relative;
-border: 1px solid #FA6F32;
-border-radius: 5px;
-margin-bottom: 20px;
+  border: 1px solid #fa6f32;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.galery-item img {
+  width: 100%;
 }
 .galery-name {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  margin-top: 8px;
+  margin-left: 18px;
+  /* or 22px */
 
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 140%;
-margin-top: 8px;
-margin-left: 18px;
-/* or 22px */
+  text-transform: uppercase;
 
-text-transform: uppercase;
-
-color: #000000;
+  color: #000000;
 }
 .galery-desc {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  margin-left: 18px;
+  line-height: 120%;
+  /* identical to box height, or 18px */
 
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 300;
-font-size: 15px;
-margin-left: 18px;
-line-height: 120%;
-/* identical to box height, or 18px */
-
-
-color: #000000;
+  color: #000000;
 }
 .galery-eat {
   position: absolute;
   bottom: 10px;
   right: 14px;
+}
+.btn-2 {
+  position: static;
+  margin-bottom: 100px;
+  margin-top: 80px;
+}
+/* Pick and feed a friend */
+.pick {
+  background-color: red;
+  padding: 20px 220px;
 }
