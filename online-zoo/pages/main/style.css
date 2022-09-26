@@ -322,6 +322,8 @@ h1 {
 }
 .btn-2 {
   position: static;
+  margin: auto;
+  left: 200px;
   margin-bottom: 100px;
   margin-top: 80px;
 }
@@ -355,6 +357,8 @@ h1 {
 }
 .pick-inner {
   /* frosted_glass_white */
+  display: flex;
+  flex-direction: column;
   margin: 0 220px;
   background: rgba(253, 253, 255, 0.52);
   backdrop-filter: blur(2px);
@@ -428,4 +432,45 @@ h1 {
 .pick-item-text {
   padding-left: 0;
   padding-bottom: 0;
+}
+
+/* testimonials */
+
+.testimonial {
+  padding: 140px 220px 180px;
+  position: relative;
+}
+.testimonial-title {
+  text-align: center;
+  margin-bottom: 47px;
+}
+.testimonial-items {
+  display: flex;
+  justify-content: space-evenly;
+}
+.testimonial-item {
+  width: 268px;
+  height: 391px;
+  /* gray_light */
+
+  background: #f1f3f2;
+  border-radius: 20px;
+}
+.testimonial-avatar {
+  display: inline-block;
+  width: 37px;
+  height: 37px;
+  margin-left: 16px;
+  margin-top: 15px;
+}
+.testimonial-name {
+  width: 231px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  /* or 19px */
+
+  color: #000000;
 }
