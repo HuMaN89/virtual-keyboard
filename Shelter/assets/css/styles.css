@@ -331,6 +331,9 @@ background: #F6F6F6;
     color: #292929;
     cursor: inherit;
 } 
+.circle-num {
+    background: #F1CDB3;
+}
 .disabled {
     border-color: #CDCDCD;
     cursor: no-drop;
