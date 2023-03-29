@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+    }
 
 .container {
     position: relative;
@@ -316,6 +319,9 @@ background: #F6F6F6;
     border: 2px solid #F1CDB3;
     cursor: pointer;
 }
+.circle:hover {
+    background: #F1CDB3;
+}
 .circle a {
     width: 100%;
     height: 100%;
@@ -336,7 +342,11 @@ background: #F6F6F6;
 }
 .disabled {
     border-color: #CDCDCD;
+    background:#E5E5E5;
     cursor: no-drop;
+}
+.disabled:hover {
+    background:#E5E5E5;
 }
 /* help */
 
