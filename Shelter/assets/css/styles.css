@@ -62,23 +62,22 @@ html {
 .burger {
   display: none;
 
-  height: 3rem;
-  width: 3rem;
-  position: absolute;
-  top: 0;
-  right: 0;
+  height: 20px;
+  width: 30px;
   padding: 0.5rem;
   z-index: 2;
-  display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  background-color: black;
+  justify-content: flex-start;
   border-radius: 0.25em;
 }
 
-.ham-menu .line {
-  background-color: white;
+.line {
+  display: block;
+  width: 30px;
+  height: 2px;
+  margin-bottom: 10px;
   border-radius: 1em;
+  border-bottom: 2px solid black;
   width: 2rem;
   height: 0.25rem;
 }
@@ -185,6 +184,12 @@ html {
 .btn:hover {
   cursor: pointer;
   background: #fddcc4;
+}
+.btn a {
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  color: #292929;
 }
 .main-img {
   position: absolute;
@@ -579,7 +584,7 @@ html {
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
   .header {
     padding-left: 30px;
     padding-right: 30px;
@@ -602,6 +607,12 @@ html {
     bottom: 0;
     width: 580px;
     margin: auto;
+  }
+  .nav {
+    display: none;
+  }
+  .burger {
+    display: flex;
   }
   .btn-main {
     margin: auto;
@@ -627,6 +638,9 @@ html {
     flex-basis: 30%;
   }
 
+  .pets-list-item {
+    flex-basis: 45%;
+  }
   .footer {
     padding: 40px 30px 0 30px;
   }
@@ -635,40 +649,41 @@ html {
   }
 }
 
-@media screen and (max-width: 320px) {
-  .nav {
-    display: none;
-  }
-  .burger {
-    display: block;
+@media screen and (max-width: 500px) {
+  .container {
+    position: relative;
+    width: 100%;
+
+    margin: auto;
   }
   .header {
     padding-left: 30px;
     padding-right: 30px;
   }
   .main {
+    padding-top: 60px;
     padding-bottom: 0;
   }
   .main-content {
     text-align: center;
   }
   .main-title {
-    width: 300px;
+    width: 200px;
     margin-left: 10px;
     margin-right: 10px;
     font-size: 25px;
-    margin: 60px auto;
+    margin: 60px auto 40px;
   }
   .main-subtitle {
-    margin-left: 10px;
-    margin-right: 10px;
-    width: auto;
+    width: 300px;
+    margin: auto;
+    margin-bottom: 40px;
   }
   .main-img {
     position: static;
     display: block;
     bottom: 0;
-    width: 580px;
+    width: 260px;
     margin: auto;
   }
   .btn-main {
@@ -681,20 +696,62 @@ html {
     align-items: center;
   }
   .about-img {
+    width: 260px;
     margin: auto;
     order: 2;
     margin-top: 80px;
+  }
+  .pets-title {
+    width: 100%;
+    font-size: 25px;
+  }
+  .pets-carousel {
+    height: 507px;
+  }
+  .carousel-item:nth-child(2) {
+    display: none;
+  }
+  .carousel-item {
+    width: 270px;
+    height: 507px;
   }
   .help {
     height: auto;
   }
   .help-list {
     height: auto;
-  }
-  .help-item {
-    flex-basis: 30%;
+    justify-content: space-between;
   }
 
+  .help-item {
+    flex-basis: 40%;
+  }
+  .help-title {
+    width: 100%;
+  }
+  .help-list {
+  }
+  .arrow-left,
+  .arrow-right {
+    top: 450px;
+  }
+  .donation {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .donation-card {
+    font-size: 15px;
+  }
+  .donation-title {
+    text-align: center;
+    font-size: 25px;
+  }
+  .donation-name {
+    text-align: center;
+  }
+  .donation-img {
+    width: 100%;
+  }
   .footer {
     padding: 40px 30px 0 30px;
   }
