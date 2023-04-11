@@ -1,7 +1,7 @@
 import { data } from "../bd.js";
 
 function openModal(id) {
-  // console.log(id.id);
+  console.log(id);
   // console.log(data[0]);
   const modalWrap = document.querySelector(".modal-wrap");
   modalWrap.classList.add("show");
