@@ -811,7 +811,7 @@ html {
 
   .modal-inner {
     max-width: 630px;
-    height: 350px;
+    height: auto;
   }
   .modal-img {
   }
@@ -853,6 +853,9 @@ html {
   }
   .modal-img {
     display: none;
+  }
+  .close {
+    right: 0px;
   }
 }
 @media screen and (max-width: 500px) {
@@ -1010,8 +1013,5 @@ html {
 @media screen and (max-width: 320px) {
   .modal-inner {
     max-width: 240px;
-  }
-  .close {
-    right: -30px;
   }
 }
