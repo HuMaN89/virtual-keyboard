@@ -61,10 +61,9 @@ html {
 }
 .burger {
   display: none;
-
+  cursor: pointer;
   height: 20px;
   width: 30px;
-  padding: 0.5rem;
   z-index: 2;
   flex-direction: column;
   justify-content: flex-start;
@@ -206,8 +205,7 @@ html {
   padding: 80px 40px 100px;
 }
 .about-img {
-  width: 300px;
-  height: 408px;
+  max-width: 300px;
   margin-right: 20px;
 }
 .about-content {
@@ -240,9 +238,9 @@ html {
 /* pets */
 .pets {
   width: 100%;
-  height: 877px;
-  padding: 80px 40px 100px;
+  padding: 80px 40px 20px;
   background: #f6f6f6;
+  position: relative;
 }
 .pets-title {
   width: 400px;
@@ -252,7 +250,6 @@ html {
   font-weight: 400;
   font-size: 35px;
   line-height: 130%;
-  display: flex;
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
@@ -260,23 +257,28 @@ html {
 }
 
 .pets-carousel {
-  width: 100%;
-  height: 435px;
+  max-width: 990px;
   position: relative;
   margin: 60px auto;
   overflow: hidden;
+
+  margin-left: 105px;
+  margin-right: 105px;
 }
 .carousel-box {
+  max-width: 990px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  transition: all 0.5s ease;
 }
 .carousel-item {
-  max-width: 270px;
+  width: 270px;
   background: #fafafa;
   border-radius: 9px;
-  transition: all 0.5s ease;
   cursor: pointer;
   text-align: center;
+  opacity: 0;
+  transition: all 0.5s ease;
 }
 .carousel-item:hover {
   transform: scale(1.1);
@@ -302,8 +304,9 @@ html {
   position: absolute;
   width: 52px;
   height: 52px;
-  top: 192px;
+  top: 395px;
   background: url(../img/button_arrow.svg);
+  z-index: 2;
 }
 .arrow-left:hover,
 .arrow-right:hover {
@@ -311,14 +314,14 @@ html {
   cursor: pointer;
 }
 .arrow-left {
-  left: 0;
+  left: 40px;
 }
 .arrow-right {
-  right: 0;
+  right: 40px;
   transform: rotateY(180deg);
 }
 .pets-btn {
-  margin: auto;
+  margin: 120px auto 40px;
 }
 .our-pets {
   padding-top: 80px;
@@ -449,7 +452,7 @@ html {
   background: #f6f6f6;
 }
 .donation-img {
-  max-width: 505px;
+  max-width: 100%;
   display: block;
 }
 .donation-content {
@@ -553,13 +556,127 @@ html {
 .footer-location {
   background: url(../img/icon-marker.svg) no-repeat;
 }
+.footer-img {
+  max-width: 100%;
+}
+.modal-wrap {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  opacity: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  background: rgba(41, 41, 41, 0.6);
+  transition: all 60s ease;
+}
+.modal-inner {
+  position: relative;
+  max-width: 900px;
+  display: flex;
+  background: #fafafa;
+  border-radius: 9px;
+}
+.modal-img {
+  flex-basis: 50%;
+  flex-shrink: 2;
 
+  border-radius: 9px;
+}
+.modal-content {
+  flex-basis: 50%;
+  padding: 50px 30px 50px 20px;
+}
+.modal-title {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #000000;
+  margin-bottom: 10px;
+}
+.modal-sub {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: #000000;
+  margin-bottom: 40px;
+}
+.modal-description {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: #000000;
+  margin-bottom: 40px;
+}
+.modal-content ul {
+  margin-left: 20px;
+}
+.modal-content li {
+  margin-bottom: 10px;
+
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: #000000;
+}
+.show {
+  display: flex;
+  opacity: 1;
+}
+.close {
+  position: absolute;
+  top: -52px;
+  right: -52px;
+  width: 52px;
+  height: 52px;
+  cursor: pointer;
+  background: url(../img/close.svg) 50% 50% no-repeat;
+
+  border: 2px solid #f1cdb3;
+  border-radius: 100px;
+}
+.close:hover {
+  background: url(../img/close.svg) 50% 50% no-repeat, #f1cdb3;
+}
 @media screen and (max-width: 1200px) {
   .main-img {
     right: 0;
   }
+  .pets-carousel {
+    max-width: 800px;
+    margin: 60px auto;
+  }
+  .carousel-box {
+    max-width: 800px;
+    justify-content: space-evenly;
+    margin: 60px auto;
+  }
 }
 
+@media screen and (max-width: 1100px) {
+  .pets-list-item {
+    width: 270px;
+  }
+  .pets-list-item:nth-child(1),
+  .pets-list-item:nth-child(2) {
+    display: none;
+  }
+}
 @media screen and (max-width: 1000px) {
   .donation {
     flex-direction: column;
@@ -582,6 +699,23 @@ html {
   .carousel-item:nth-child(3) {
     display: none;
   }
+  .modal-inner {
+    max-width: 700px;
+    height: 350px;
+  }
+  .modal-content {
+    padding-top: 10px;
+  }
+  .modal-sub {
+    margin-bottom: 20px;
+  }
+  .modal-description {
+    margin-bottom: 20px;
+    font-size: 13px;
+  }
+  .modal-content li {
+    margin-bottom: 5px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -591,6 +725,7 @@ html {
   }
   .main {
     padding-bottom: 0;
+    overflow: hidden;
   }
   .main-content {
   }
@@ -605,7 +740,7 @@ html {
     position: static;
     display: block;
     bottom: 0;
-    width: 580px;
+    max-width: 580px;
     margin: auto;
   }
   .nav {
@@ -647,8 +782,53 @@ html {
   .footer-item {
     margin-bottom: 45px;
   }
-}
 
+  .modal-inner {
+    max-width: 630px;
+    height: 350px;
+  }
+  .modal-img {
+  }
+  .modal-content {
+    padding-top: 10px;
+  }
+  .modal-title {
+  }
+  .modal-sub {
+    margin-bottom: 20px;
+  }
+  .modal-description {
+    margin-bottom: 20px;
+    font-size: 13px;
+  }
+  .modal-content ul {
+  }
+  .modal-content li {
+    margin-bottom: 5px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .carousel-item:nth-child(2) {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  .modal-inner {
+    max-width: 350px;
+  }
+  .modal-content {
+    flex-basis: 100%;
+    padding: 50px 30px 50px 20px;
+    text-align: justify;
+  }
+  .modal-title,
+  .modal-sub {
+    text-align: center;
+  }
+  .modal-img {
+    display: none;
+  }
+}
 @media screen and (max-width: 500px) {
   .container {
     position: relative;
@@ -694,9 +874,11 @@ html {
     flex-direction: column;
     height: auto;
     align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .about-img {
-    width: 260px;
+    max-width: 200px;
     margin: auto;
     order: 2;
     margin-top: 80px;
@@ -707,9 +889,6 @@ html {
   }
   .pets-carousel {
     height: 507px;
-  }
-  .carousel-item:nth-child(2) {
-    display: none;
   }
   .carousel-item {
     width: 270px;
@@ -730,10 +909,6 @@ html {
     width: 100%;
   }
   .help-list {
-  }
-  .arrow-left,
-  .arrow-right {
-    top: 450px;
   }
   .donation {
     padding-left: 10px;
@@ -757,5 +932,39 @@ html {
   }
   .footer-item {
     margin-bottom: 45px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .arrow-left,
+  .arrow-right {
+    top: 785px;
+  }
+  .modal-img {
+    display: none;
+  }
+  .modal-content {
+    padding-top: 10px;
+  }
+  .modal-title {
+  }
+  .modal-sub {
+    margin-bottom: 20px;
+  }
+  .modal-description {
+    margin-bottom: 20px;
+    font-size: 13px;
+  }
+  .modal-content ul {
+  }
+  .modal-content li {
+    margin-bottom: 5px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .modal-inner {
+    max-width: 240px;
+  }
+  .close {
+    right: -30px;
   }
 }
