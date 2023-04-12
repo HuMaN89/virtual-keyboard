@@ -1,8 +1,21 @@
 import { data } from "../bd.js";
 
+function closeModal(modalSelector) {
+  const modalWrap = document.querySelector(".modal-wrap");
+  modalWrap.classList.remove("show");
+  document.body.style.overflow = "";
+}
+
+function modal() {
+  const modalWrap = document.querySelector(".modal-wrap"),
+    close = document.querySelector(".close");
+  modalWrap.addEventListener("click", (el) => {
+    if (el.target === modalWrap || el.target === close) {
+      closeModal();
+    }
+  });
+}
 function openModal(id) {
-  console.log(id);
-  // console.log(data[0]);
   const modalWrap = document.querySelector(".modal-wrap");
   modalWrap.classList.add("show");
   document.body.style.overflow = "hidden";
@@ -29,22 +42,6 @@ function openModal(id) {
   <div class="close"></div>
 </div>`;
   modal();
-}
-function closeModal(modalSelector) {
-  const modalWrap = document.querySelector(".modal-wrap");
-  modalWrap.classList.remove("show");
-  document.body.style.overflow = "";
-}
-
-function modal() {
-  const modalWrap = document.querySelector(".modal-wrap"),
-    close = document.querySelector(".close");
-
-  modalWrap.addEventListener("click", (el) => {
-    if (el.target === modalWrap || el.target === close) {
-      closeModal();
-    }
-  });
 }
 
 export default modal;
