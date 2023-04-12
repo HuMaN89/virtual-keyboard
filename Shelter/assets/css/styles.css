@@ -273,6 +273,7 @@ html {
   border-radius: 9px;
   cursor: pointer;
   text-align: center;
+  margin-left: 25px;
   opacity: 0;
   transition: all 0.5s ease;
 }
@@ -366,6 +367,8 @@ html {
   margin-right: 20px;
   border: 2px solid #f1cdb3;
   cursor: pointer;
+  text-align: center;
+  line-height: 52px;
 }
 .circle:hover {
   background: #f1cdb3;
@@ -668,8 +671,8 @@ html {
   .pets-list-item {
     width: 270px;
   }
-  .pets-list-item:nth-child(1),
-  .pets-list-item:nth-child(2) {
+  .pets-list-item:nth-child(2),
+  .pets-list-item:nth-child(3) {
     display: none;
   }
 }
@@ -690,9 +693,7 @@ html {
     padding-left: 30px;
     padding-right: 30px;
   }
-  .carousel-item {
-  }
-  .carousel-item:nth-child(3) {
+  .carousel-item:nth-child(2) {
     display: none;
   }
   .modal-inner {
@@ -722,8 +723,6 @@ html {
   .main {
     padding-bottom: 0;
     overflow: hidden;
-  }
-  .main-content {
   }
   .main-title {
     margin-left: 154px;
@@ -813,12 +812,8 @@ html {
     max-width: 630px;
     height: auto;
   }
-  .modal-img {
-  }
   .modal-content {
     padding-top: 10px;
-  }
-  .modal-title {
   }
   .modal-sub {
     margin-bottom: 20px;
@@ -827,14 +822,12 @@ html {
     margin-bottom: 20px;
     font-size: 13px;
   }
-  .modal-content ul {
-  }
   .modal-content li {
     margin-bottom: 5px;
   }
 }
 @media screen and (max-width: 750px) {
-  .carousel-item:nth-child(2) {
+  .carousel-item:last-child {
     display: none;
   }
 }
@@ -856,6 +849,18 @@ html {
   }
   .close {
     right: 0px;
+  }
+
+  .pets-list-item:nth-child(2),
+  .pets-list-item:nth-child(3),
+  .pets-list-item:nth-child(4),
+  .pets-list-item:nth-child(5),
+  .pets-list-item:nth-child(6) {
+    display: none;
+  }
+  .pets-list-item {
+    flex-basis: 55%;
+    text-align: center;
   }
 }
 @media screen and (max-width: 500px) {
