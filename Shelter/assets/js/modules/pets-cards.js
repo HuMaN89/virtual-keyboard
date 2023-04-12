@@ -97,10 +97,10 @@ function petsCards() {
   }
 
   function pagination() {
-    // for (let i = 1; i <= pageCount; i++) {
-    //   pagArray.push(i);
-    // }
-    pagArray = [...pagArray, page, ">", ">>"];
+    for (let i = 1; i <= pageCount; i++) {
+      pagArray.push(i);
+    }
+    pagArray = [...pagArray, ">", ">>"];
   }
 
   function initPagination() {
