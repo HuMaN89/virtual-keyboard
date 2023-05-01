@@ -53,19 +53,19 @@
   background: #fc0202;
   border-radius: 25px;
 }
-.backspace {
+.Backspace {
   width: 100px;
 }
-.capslock,
-.enter,
-.left-shift,
-.right-shift {
+.CapsLock,
+.Enter,
+.ShiftLeft,
+.ShiftRight {
   width: 100px;
 }
-.tab,
-.del {
+.Tab,
+.Delete {
   width: 50px;
 }
-.space {
+.Space {
   width: 330px;
 }
