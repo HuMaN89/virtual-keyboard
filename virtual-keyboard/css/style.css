@@ -2,12 +2,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: #72fc02;
 }
-
 .virtual-keyboard {
   width: 100%;
   height: 100vh;
-  background-color: aqua;
+  background: linear-gradient(
+    to right bottom,
+    rgb(88, 174, 50),
+    rgb(1, 16, 34)
+  );
   text-align: center;
   padding-top: 10px;
 }
@@ -16,6 +20,9 @@
 }
 .text-area {
   width: 700px;
+  border-radius: 5px;
+  padding: 10px;
+  color: #000000;
 }
 .keyboard {
   width: 700px;
@@ -23,7 +30,11 @@
   margin-bottom: 15px;
   padding: 8px 0px 8px 8px;
   border: 5px solid #000000;
-  background-color: #293f38;
+  background: linear-gradient(
+    to right bottom,
+    rgb(15, 255, 99),
+    rgb(30, 99, 184)
+  );
   border-radius: 5px;
   overflow: hidden;
 }
