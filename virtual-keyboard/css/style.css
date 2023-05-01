@@ -55,10 +55,7 @@
   cursor: pointer;
   margin-right: 5px;
   user-select: none;
-  transition: all 0.5s ease;
-}
-.keyboard-key:hover {
-  background: #7e3b3b;
+  transition: all 0.1s ease;
 }
 .active {
   background: #fc0202;

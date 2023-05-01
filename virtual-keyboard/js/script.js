@@ -126,8 +126,11 @@ const init = () => {
   textArea.cols = '50';
   let registr = false;
 
+  if (window.localStorage.getItem('langKey') === 'undefined') {
+    window.localStorage.setItem('langKey', '1');
+  }
   let key = window.localStorage.getItem('langKey');
-
+  console.log(key);
   desc.innerText = 'Клавиатура создана в операционной системе Windows';
   lang.innerText = 'Для переключения языка комбинация:  Ctrl + Alt';
   main.append(title);
@@ -171,6 +174,33 @@ const init = () => {
         const keyboardKey = document.createElement('span');
         keyboardKey.classList.add('keyboard-key');
         keyboardKey.classList.add(`${ar[i][0]}`);
+
+        keyboardKey.addEventListener('mousedown', () => {
+          if (
+            ar[i][key] !== 'CapsLock' &&
+            ar[i][key] !== 'Shift' &&
+            ar[i][key] !== 'Enter' &&
+            ar[i][key] !== 'Tab' &&
+            ar[i][key] !== 'Backspace' &&
+            ar[i][key] !== 'Delete' &&
+            ar[i][key] !== 'Ctrl' &&
+            ar[i][key] !== 'Win' &&
+            ar[i][key] !== 'Del' &&
+            ar[i][key] !== 'Space' &&
+            ar[i][key] !== 'Alt'
+          ) {
+            textArea.innerHTML += ar[i][key];
+          }
+
+          if (ar[i][key] === 'Tab') {
+            textArea.innerHTML += '  ';
+          }
+          keyboardKey.classList.add(`active`);
+        });
+
+        keyboardKey.addEventListener('mouseup', () => {
+          keyboardKey.classList.remove(`active`);
+        });
         if (event.code === ar[i][0] && value === 'dawn') {
           keyboardKey.classList.add(`active`);
         }
@@ -182,6 +212,7 @@ const init = () => {
           keyboardKey.classList.add(`active`);
         }
         keyboardKey.innerText = ar[i][key];
+
         keyboardRow.append(keyboardKey);
       }
       keyboard.append(keyboardRow);
