@@ -126,10 +126,7 @@ const init = () => {
   textArea.cols = '50';
   let registr = false;
 
-  if (window.localStorage.getItem('langKey') === 'undefined') {
-    window.localStorage.setItem('langKey', '1');
-  }
-  let key = window.localStorage.getItem('langKey');
+  let key = window.localStorage.getItem('langKey') || 1;
   console.log(key);
   desc.innerText = 'Клавиатура создана в операционной системе Windows';
   lang.innerText = 'Для переключения языка комбинация:  Ctrl + Alt';
