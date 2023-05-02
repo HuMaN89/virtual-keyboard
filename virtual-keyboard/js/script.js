@@ -152,11 +152,11 @@ const init = () => {
         key = window.localStorage.getItem('langKey');
       }
     }
-    if (event.key === 'CapsLock' && value === 'dawn') {
+    if (event.key === 'CapsLock' && value === 'dawn' && !event.repeat) {
       registr ? (key = 1) : (key = 2);
       registr = !registr;
     }
-    if (event.key === 'Shift') {
+    if (event.key === 'Shift' && !event.repeat) {
       registr ? (key = 1) : (key = 2);
       registr = !registr;
     }
