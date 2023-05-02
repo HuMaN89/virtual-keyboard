@@ -140,16 +140,16 @@ const init = () => {
     if (event.ctrlKey && event.altKey) {
       if (key === 1) {
         window.localStorage.setItem('langKey', '3');
-        key = window.localStorage.getItem('langKey');
+        key = 3;
       } else if (key === 2) {
         window.localStorage.setItem('langKey', '4');
-        key = window.localStorage.getItem('langKey');
+        key = 4;
       } else if (key === 3) {
         window.localStorage.setItem('langKey', '1');
-        key = window.localStorage.getItem('langKey');
+        key = 1;
       } else {
         window.localStorage.setItem('langKey', '2');
-        key = window.localStorage.getItem('langKey');
+        key = 2;
       }
     }
     if (event.key === 'CapsLock' && value === 'dawn' && !event.repeat) {
