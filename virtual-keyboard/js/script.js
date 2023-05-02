@@ -126,10 +126,7 @@ const init = () => {
   textArea.cols = '50';
   let registr = false;
 
-  if (window.localStorage.getItem('langKey') === 'undefined') {
-    window.localStorage.setItem('langKey', '1');
-  }
-  let key = window.localStorage.getItem('langKey');
+  let key = window.localStorage.getItem('langKey') || 1;
   console.log(key);
   desc.innerText = 'Клавиатура создана в операционной системе Windows';
   lang.innerText = 'Для переключения языка комбинация:  Ctrl + Alt';
@@ -155,11 +152,11 @@ const init = () => {
         key = window.localStorage.getItem('langKey');
       }
     }
-    if (event.key === 'CapsLock' && value === 'dawn') {
+    if (event.key === 'CapsLock' && value === 'dawn' && !event.repeat) {
       registr ? (key = 1) : (key = 2);
       registr = !registr;
     }
-    if (event.key === 'Shift') {
+    if (event.key === 'Shift' && !event.repeat) {
       registr ? (key = 1) : (key = 2);
       registr = !registr;
     }
